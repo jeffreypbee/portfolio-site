@@ -50,7 +50,8 @@ body {
 }
 
 #app {
-  background-color: rgba(50, 50, 50, 0.6);
+  background-color: rgba(50, 50, 50, 0.2);
+  animation: translucentbg 15s ease infinite;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -64,10 +65,27 @@ body {
                       "footer";
 }
 
+@keyframes translucentbg {
+  20% {
+    background-color: rgba(50, 50, 50, 0.4);
+  }
+  50% {
+    background-color: rgba(50, 50, 50, 0.6);
+  }
+  70% {
+    background-color: rgba(50, 50, 50, 0.4);
+  }
+  100% {
+    background-color: rgba(50, 50, 50, 0.2);
+  }
+  
+}
+
 header {
   grid-area: header;
   display: flex;
   justify-content: space-between;
+  padding: 10px;
 }
 
 body {
