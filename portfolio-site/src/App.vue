@@ -29,11 +29,28 @@
 }
 
 body {
-  background-color: var(--darkgray);
+  background: linear-gradient(-45deg, var(--red), var(--blue));
+  background-size: 400% 400%;
   height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 #app {
+  background-color: rgba(50, 50, 50, 0.6);
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
