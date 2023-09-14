@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <header>
+    <header class="middle-gradient">
       <div id="site-name">
         jeffrey<span class="red-text">p</span><span class="blue-text">bee</span><span class="red-text">.</span>com
       </div>      
       <nav>
-        <router-link to="/">Home</router-link> |
+        <router-link to="/">Home</router-link>
         <router-link to="/about">About</router-link>
       </nav>
     </header>
@@ -14,7 +14,7 @@
       <router-view/>
     </main>
     
-    <footer>
+    <footer class="middle-gradient">
       Copyright &copy; 2023 Jeffrey Bee
     </footer>
   </div>
@@ -59,7 +59,7 @@ body {
   color: #eee;
   height: 100%;
   display: grid;
-  grid-template-rows: 20% auto 20%;
+  grid-template-rows: 10% auto 5%;
   grid-template-areas: "header"
                       "body"
                       "footer";
@@ -84,8 +84,12 @@ body {
 header {
   grid-area: header;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   padding: 10px;
+  padding-bottom: 0px;
+  border-bottom: 1px solid white;
 }
 
 body {
@@ -96,27 +100,45 @@ footer {
   grid-area: footer;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  border-top: 1px solid white;
+}
+
+.middle-gradient {
+  background: linear-gradient(to right, rgba(50, 50, 50, 0), rgba(50, 50, 50, .5), rgba(50, 50, 50, 0));
 }
 
 #site-name {
   font-weight: bold;
   font-size: 2rem;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+  padding: 10px;
 }
 
 a {
   font-weight: bold;
   color: var(--blue);
+  text-decoration: none;
+}
+
+nav {
+  padding-bottom: 0px;
 }
 
 nav a {
-  border-radius: 10px;
   padding: 5px;
+  padding-bottom: 1px;
+  margin-bottom: 0px;
+  margin-right: 5px;
+  color: var(--darkgray);
+  background-color: var(--lightgray);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 nav a.router-link-exact-active {  
-  color: white;
+  color: var(--darkgray);
+  background-color: white;
 }
 
 .red-text {
