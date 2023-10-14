@@ -31,7 +31,7 @@
 }
 
 body {
-  background: linear-gradient(-45deg, var(--red), var(--blue));
+  background: linear-gradient(15deg, var(--red), var(--blue));
   background-size: 400% 400%;
   height: 100vh;
   margin: 0px;
@@ -104,6 +104,8 @@ footer {
   flex-direction: column;
   justify-content: center;
   border-top: 1px solid white;
+  color: var(--gray);
+  background-color: #3335
 }
 
 .middle-gradient {
@@ -125,14 +127,16 @@ a {
 
 nav {
   padding-bottom: 0px;
+  position: relative;
 }
 
 nav a {
+  position: relative;
+  top: 10px;
   padding: 5px;
   margin: 0 5px;
   color: var(--darkgray);
-  background-color: var(--gray);
-  position: relative;
+  background-color: var(--gray);  
   z-index: 5;
 }
 
