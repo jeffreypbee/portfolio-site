@@ -52,7 +52,7 @@ body {
 #app {
   background-color: rgba(50, 50, 50, 0.2);
   animation: translucentbg 15s ease infinite;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -151,5 +151,14 @@ nav a.router-link-exact-active {
 
 .light-gray-text {
   color: var(--lightgray);
+}
+
+.hover-grow {
+  transition: scale 1s;
+}
+
+.hover-grow:hover {
+  scale: 110%;
+  cursor: pointer;
 }
 </style>
