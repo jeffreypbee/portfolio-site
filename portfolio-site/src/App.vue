@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <header class="middle-gradient">
+    <header>
       <div id="site-name">
-        jeffrey<span class="red-text">p</span><span class="blue-text">bee</span><span class="red-text">.</span>com
+        jeffrey<span class="gray-text">p</span>bee<span class="gray-text">.com</span>
       </div>      
       <nav>
         <router-link to="/">Home</router-link>
+        <router-link to="/projects">Projects</router-link>
         <router-link to="/about">About</router-link>
       </nav>
     </header>
     
-    <main>
+    <main class="middle-gradient">
       <router-view/>
     </main>
     
@@ -25,6 +26,7 @@
   --red: red;
   --blue: #0099ff;
   --lightgray: lightgray;
+  --gray: #aaa;
   --darkgray: #333;
 }
 
@@ -89,7 +91,7 @@ header {
   align-items: center;
   padding: 10px;
   padding-bottom: 0px;
-  border-bottom: 1px solid white;
+  border-bottom: 3px solid white;
 }
 
 body {
@@ -105,7 +107,7 @@ footer {
 }
 
 .middle-gradient {
-  background: linear-gradient(to right, rgba(50, 50, 50, 0), rgba(50, 50, 50, .5), rgba(50, 50, 50, 0));
+  background: linear-gradient(to right, rgba(50, 50, 50, .5), rgba(50, 50, 50, .8), rgba(50, 50, 50, .5));
 }
 
 #site-name {
@@ -127,13 +129,11 @@ nav {
 
 nav a {
   padding: 5px;
-  padding-bottom: 1px;
-  margin-bottom: 0px;
-  margin-right: 5px;
+  margin: 0 5px;
   color: var(--darkgray);
-  background-color: var(--lightgray);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  background-color: var(--gray);
+  position: relative;
+  z-index: 5;
 }
 
 nav a.router-link-exact-active {  
@@ -147,6 +147,10 @@ nav a.router-link-exact-active {
 
 .blue-text {
   color: var(--blue);
+}
+
+.gray-text {
+  color: var(--gray);
 }
 
 .light-gray-text {
